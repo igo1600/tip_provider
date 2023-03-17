@@ -5,13 +5,15 @@ class TipTimeProvider with ChangeNotifier {
   int? _selectedRadio = null;
   int? get getSelectedRadio => _selectedRadio;
   var costController = TextEditingController();
+  double tipAmount = 0.0;
+  double totalAmount = 0.0;
 
   var radioGroupValues = {
     0: "Amazing 20%",
     1: "Good 18%",
     2: "Ok 15%",
   };
-  void tipCalculation(int dato) {
+  void tipCalculation() {
     double cost = double.tryParse(costController.text) ?? 0.0;
     double tipPercentage;
 
@@ -35,6 +37,9 @@ class TipTimeProvider with ChangeNotifier {
 
       print('Tip Amount: $tipAmount');
       print('Total Amount: $totalAmount');
+
+      this.tipAmount = tipAmount;
+      this.totalAmount = totalAmount;
     } else {
       print('Enter a valid cost and select a tip percentage.');
     }

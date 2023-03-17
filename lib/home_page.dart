@@ -63,10 +63,13 @@ class HomePage extends StatelessWidget {
           MaterialButton(
             child: Text("CALCULATE"),
             onPressed: () {
-              context.read<TipTimeProvider>().tipCalculation(23244);
+              context.read<TipTimeProvider>().tipCalculation();
             },
           ),
-          Text("Tip amount: \$22"),
+          Text(
+              "Tip amount: \$${context.watch<TipTimeProvider>().tipAmount.toStringAsFixed(2)}"),
+          Text(
+              "Total amount: \$${context.watch<TipTimeProvider>().totalAmount.toStringAsFixed(2)}"),
         ],
       ),
     );
