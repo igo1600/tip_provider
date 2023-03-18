@@ -1,8 +1,7 @@
-# App Tip Time (incompleta)
+# App Tip Time
 
-App para practicar el disenio de layouts con widgets mas comunes
-containers, stacks, row/columns, text, etc...
-manejo de estados con provider
+![image](https://user-images.githubusercontent.com/45242055/226072598-85e04705-bcd3-40ca-b770-15b7dc6fa3fb.png)
+
 
 ## Getting Started
 
